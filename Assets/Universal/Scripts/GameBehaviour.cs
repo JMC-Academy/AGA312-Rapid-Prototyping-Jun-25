@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class GameBehaviour : MonoBehaviour
 {
-
-
     #region Coroutine Helpers
 
     /// <summary>

@@ -3,6 +3,8 @@ using UnityEngine;
 public class Playground : GameBehaviour
 {
     public GameObject player;
+    public Rigidbody rb;
+    [ReadOnly] public int speed = 5;
 
     void Start()
     {
@@ -18,12 +20,34 @@ public class Playground : GameBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
-            player.GetComponent<Renderer>().material.color = ColorX.GetRandomColour();
+            player.GetComponent<Renderer>().material.color = ColorX.GetRandomColor();
     }
 
     private void SetupPlayer()
     {
-        player.GetComponent<Renderer>().material.color = ColorX.GetRandomColour();
+        player.GetComponent<Renderer>().material.color = ColorX.GetRandomColor();
         ObjectX.ScaleObjectToValue(player);
+    }
+
+    private void OnMove(Vector2 _moveVector)
+    {
+        player.transform.position += new Vector3(_moveVector.x, 0, _moveVector.y);
+    }
+
+    private void OnJump()
+    {
+        print("Jumped");
+    }
+
+    private void OnEnable()
+    {
+        InputManager.OnMove += OnMove;
+        InputManager.OnJump += OnJump;
+    }
+
+    private void OnDisable()
+    {
+        InputManager.OnMove -= OnMove;
+        InputManager.OnJump -= OnJump;
     }
 }

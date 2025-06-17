@@ -64,7 +64,6 @@ public class GameBehaviour : MonoBehaviour
     }
 
     #endregion
-
 }
 
 public class GameBehaviour<T> : GameBehaviour where T : GameBehaviour

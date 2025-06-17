@@ -5,6 +5,7 @@ public class Playground : GameBehaviour
     public GameObject player;
     public Rigidbody rb;
     [ReadOnly] public int speed = 5;
+    public GameObject tester;
 
     void Start()
     {
@@ -17,12 +18,6 @@ public class Playground : GameBehaviour
         ExecuteAfterFrames(3, () => print("3 frames later..."));
     }
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-            player.GetComponent<Renderer>().material.color = ColorX.GetRandomColor();
-    }
-
     private void SetupPlayer()
     {
         player.GetComponent<Renderer>().material.color = ColorX.GetRandomColor();
@@ -31,12 +26,14 @@ public class Playground : GameBehaviour
 
     private void OnMove(Vector2 _moveVector)
     {
-        player.transform.position += new Vector3(_moveVector.x, 0, _moveVector.y);
+        player.transform.position += new Vector3(_moveVector.x, 0, _moveVector.y) * Time.deltaTime;
     }
 
-    private void OnJump()
+    public void OnJump()
     {
-        print("Jumped");
+        player.GetComponent<Renderer>().material.color = ColorX.GetRandomColor();
+        GameEvents.ReportOnPlayerHit();
+        GameEvents.ReportOnPlayerDied(player);
     }
 
     private void OnEnable()

@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class GameBehaviour : MonoBehaviour
 {
+    protected static UIManager _UI { get { return UIManager.Instance; } }
+
     #region Coroutine Helpers
 
     /// <summary>

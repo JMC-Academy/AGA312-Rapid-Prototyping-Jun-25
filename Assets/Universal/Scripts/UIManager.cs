@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class UIManager : MonoBehaviour
+public class UIManager : GameBehaviour<UIManager>
 {
     public TMPro.TMP_Text score;
     private int scoreValue = 0;

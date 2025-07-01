@@ -81,7 +81,7 @@ public class TweenFun : GameBehaviour
 
     private void IncreaseScore()
     {
-        TweenX.TweenNumbers(scoreText, score, score + scoreBonus, scoreTweenTime, scoreEase, "F1");
+        TweenX.TweenNumbers(scoreText, score, score + scoreBonus, scoreTweenTime, scoreEase, "F2");
         score = score + scoreBonus;
     }
 }

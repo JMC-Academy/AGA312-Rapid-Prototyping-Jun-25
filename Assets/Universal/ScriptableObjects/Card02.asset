@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2096c898400a0444781db6343ba6f6b6, type: 3}
+  m_Name: Card02
+  m_EditorClassIdentifier: 
+  cardID: 1
+  suite: 1
+  value: 5
+  colour: {r: 0.4117647, g: 0.4117647, b: 0.4117647, a: 1}
+  description: Never forgets
+  icon: {fileID: 21300000, guid: dbec7041078fea54f84b22fa6aa11645, type: 3}

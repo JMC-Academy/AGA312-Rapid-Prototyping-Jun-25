@@ -6,6 +6,7 @@ using UnityEngine;
 public class GameBehaviour : MonoBehaviour
 {
     protected static UIManager _UI { get { return UIManager.Instance; } }
+    protected static SaveManager _SAVE => SaveManager.Instance;
 
     #region Coroutine Helpers
 

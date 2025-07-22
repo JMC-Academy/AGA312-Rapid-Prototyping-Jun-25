@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Playground : GameBehaviour
@@ -16,7 +17,27 @@ public class Playground : GameBehaviour
         });
 
         ExecuteAfterFrames(3, () => print("3 frames later..."));
+
+        ///InitializeLevel();
     }
+
+
+    //private Action InitializeLevel(Action _onComplete = null)
+    //{
+    //    print("starting the function");
+
+        //ExecuteAfterSeconds(1, () =>
+        //{
+        //    _onComplete?.Invoke();
+        //});
+        //return _onComplete?.Invoke();
+
+    //    void OnComplete(float _time, Action _onComplete = null)
+    //{
+    //    bool saveLoaded = false;
+    //    ExecuteWhenTrue(() => saveLoaded, () => _onComplete?.Invoke());
+    //}
+    //}
 
     private void SetupPlayer()
     {

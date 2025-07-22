@@ -20,6 +20,7 @@ public class TweenFun : GameBehaviour
     [SerializeField] private Ease scoreEase;
     private int score;
 
+    Tweener moveTweener;
     public void Start()
     {
         player.GetComponent<Renderer>().material.color = _SAVE.GetPlayerColor;
@@ -64,13 +65,15 @@ public class TweenFun : GameBehaviour
                     OnComplete(TweenComplete);
                 break;
             case Direction.West:
-                player.transform.DOLocalMoveX(player.transform.localPosition.x - moveDistance, moveTweenTime).
+                moveTweener = player.transform.DOLocalMoveX(player.transform.localPosition.x - moveDistance, moveTweenTime).
                     SetEase(moveEase).
                     OnComplete(TweenComplete);
                 break;
 
         }
         ChangeColour();
+
+        moveTweener.OnComplete(TweenComplete);
         
     }
 

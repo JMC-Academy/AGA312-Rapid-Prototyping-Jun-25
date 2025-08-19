@@ -8,6 +8,8 @@ public class Playground : GameBehaviour
     [ReadOnly] public int speed = 5;
     public GameObject tester;
 
+    public float fogIntensity;
+
     void Start()
     {
         ObjectX.ScaleObjectToZero(player);
@@ -26,11 +28,11 @@ public class Playground : GameBehaviour
     //{
     //    print("starting the function");
 
-        //ExecuteAfterSeconds(1, () =>
-        //{
-        //    _onComplete?.Invoke();
-        //});
-        //return _onComplete?.Invoke();
+    //ExecuteAfterSeconds(1, () =>
+    //{
+    //    _onComplete?.Invoke();
+    //});
+    //return _onComplete?.Invoke();
 
     //    void OnComplete(float _time, Action _onComplete = null)
     //{
@@ -38,6 +40,14 @@ public class Playground : GameBehaviour
     //    ExecuteWhenTrue(() => saveLoaded, () => _onComplete?.Invoke());
     //}
     //}
+
+
+    public float timeLimit = 120;
+    private void Update()
+    {
+        timeLimit -= Time.deltaTime;
+        fogIntensity = MathX.Map(timeLimit, 0, 120, 20, 600);
+    }
 
     private void SetupPlayer()
     {

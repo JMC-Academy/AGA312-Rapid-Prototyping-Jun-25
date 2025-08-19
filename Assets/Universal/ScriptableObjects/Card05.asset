@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardID: 4
   suite: 3
-  value: 8
+  value: 1
   colour: {r: 0.4, g: 0.2, b: 0.6, a: 1}
-  description: Jokes on you.
+  description: A large stone golem. Its formidable health and devastating damage
+    come at the cost of being un-healable.
   icon: {fileID: 21300000, guid: 3603e873211ffbf49ad4339be91bface, type: 3}

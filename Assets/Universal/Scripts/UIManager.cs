@@ -4,6 +4,7 @@ public class UIManager : GameBehaviour<UIManager>
 {
     public TMPro.TMP_Text score;
     private int scoreValue = 0;
+    public int ScoreVale => scoreValue;
 
     private void OnPlayerHit()
     {

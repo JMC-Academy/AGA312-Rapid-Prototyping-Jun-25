@@ -2,7 +2,6 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
-using DG.DemiEditor;
 
 public static class TweenX
 {

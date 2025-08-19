@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardID: 0
   suite: 0
-  value: 3
+  value: 2
   colour: {r: 0.7207546, g: 0.09655393, b: 0.23959982, a: 1}
-  description: Didn't go extinct for nothing.
+  description: "A beautiful woman with wings and a cow\u2019s tail. She can fly at
+    high speeds and can transform herself into a defence tower which shoots magic
+    missiles."
   icon: {fileID: 21300000, guid: 3f0c5589f5d705244bdaeefbe1765e70, type: 3}

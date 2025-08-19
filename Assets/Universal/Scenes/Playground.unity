@@ -405,6 +405,11 @@ MonoBehaviour:
   cardPrefab: {fileID: 8810471019995628364, guid: 3947345639a7ec54e9c3f19089d384da, type: 3}
   cardsInHand: []
   handCount: 4
+  showNextField: 1
+  regularName: Randnjhs
+  stringName: Randnjhs
+  cardDataSheet: {fileID: 4900000, guid: 75440565640e10c46b91fe34018f5c2b, type: 3}
+  sheetsPath: /Assets/Universal/
 --- !u!4 &523018574
 Transform:
   m_ObjectHideFlags: 0
@@ -1612,6 +1617,8 @@ MonoBehaviour:
   rb: {fileID: 0}
   speed: 5
   tester: {fileID: 0}
+  fogIntensity: 0
+  timeLimit: 120
 --- !u!4 &1845930033
 Transform:
   m_ObjectHideFlags: 0

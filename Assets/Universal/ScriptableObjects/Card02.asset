@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardID: 1
   suite: 1
-  value: 5
+  value: 4
   colour: {r: 0.4117647, g: 0.4117647, b: 0.4117647, a: 1}
-  description: Never forgets
+  description: A large, powerful ogre Guardian wielding a two handed battle axe in
+    one hand.
   icon: {fileID: 21300000, guid: dbec7041078fea54f84b22fa6aa11645, type: 3}
